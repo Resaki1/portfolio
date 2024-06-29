@@ -1,0 +1,15 @@
+.hero {
+  background-color: var(--color-black);
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.8rem;
+  margin-left: 12.5%;
+  font-weight: 800;
+}
