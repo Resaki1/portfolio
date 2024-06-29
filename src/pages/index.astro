@@ -1,20 +1,19 @@
 ---
+import Hero from '../components/Hero';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<Hero />
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+		color: var(--color-font);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>
