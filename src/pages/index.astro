@@ -1,11 +1,13 @@
 ---
-import Hero from '../components/Hero';
+import Hero from '../components/Hero/Hero';
+import About from '../components/About/About';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Hero />
+		<About />
 	</main>
 </Layout>
 
@@ -15,5 +17,9 @@ import Layout from '../layouts/Layout.astro';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	section {
+		padding: 4vh 4vh
 	}
 </style>
