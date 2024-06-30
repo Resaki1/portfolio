@@ -4,7 +4,7 @@ import { projects } from "./projects";
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="Projects">
       <h2>Projects</h2>
       <ul className="projects__list">
         {projects.map((project, index) => (

@@ -1,0 +1,88 @@
+<section class="contact" id="Contact">
+  <h2>Contact</h2>
+  <p>I'd love to hear from you! You can contact me through my socials:</p>
+  <ul>
+    <li>LinkedIn</li>
+    <li>GitHub</li>
+    <li>Instagram</li>
+  </ul>
+  <p>Or just write me directly:</p>
+  <form>
+    <input
+      type="text"
+      placeholder="Your mail (optional)"
+      class="contact__input-mail"
+    />
+    <textarea placeholder="Message" class="contact__input-message"></textarea>
+    <button class="contact__button">SEND</button>
+  </form>
+</section>
+
+<style lang="scss" scoped>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--width-content);
+    padding-bottom: 16vh;
+  }
+
+  form {
+    width: 480px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  input,
+  textarea {
+    background: var(--color-gray);
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    color: var(--color-font);
+    caret-color: var(--color-primary);
+    font-family: Biryani, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    box-sizing: border-box;
+  }
+
+  .contact__input-mail {
+    height: 48px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+  }
+
+  .contact__input-message {
+    height: 48px;
+    height: 128px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 128px;
+    padding: 12px 16px 8px 16px;
+    margin-bottom: 16px;
+  }
+
+  .contact__button {
+    outline: none;
+    border: none;
+    height: 32px;
+    width: 128px;
+    background: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: var(--color-font);
+    font-family: Biryani, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+</style>
