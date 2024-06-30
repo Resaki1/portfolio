@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,52 +8,54 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	@font-face {
-        font-family: 'Biryani';
-        src: url('/fonts/Biryani/Biryani-Regular.ttf') format('truetype');
-        font-weight: 400;
-    }
+  @font-face {
+    font-family: "Biryani";
+    src: url("/fonts/Biryani/Biryani-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
 
-	@font-face {
-        font-family: 'Biryani';
-        src: url('/fonts/Biryani/Biryani-ExtraBold.ttf') format('truetype');
-        font-weight: 800;
-    }
+  @font-face {
+    font-family: "Biryani";
+    src: url("/fonts/Biryani/Biryani-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+  }
 
-	:root {
-		--color-background: #131313;
-		--color-font: #f1f1f1;
-		--color-black: #0b0b0b;
-		--color-gray: #2B2B2B;
-		--color-primary: #9B5ECB;
-	}
-	html {
-		font-family: Biryani, sans-serif;
-		background: var(--color-background);
-		line-height: 1.6;
-	}
+  :root {
+    --color-background: #131313;
+    --color-font: #f1f1f1;
+    --color-black: #0b0b0b;
+    --color-gray: #2b2b2b;
+    --color-primary: #9b5ecb;
 
-	body {
-		margin: 0;
-		padding: 0;
-	}
+    --width-content: 1472px;
+  }
+  html {
+    font-family: Biryani, sans-serif;
+    background: var(--color-background);
+    line-height: 1.6;
+  }
 
-	section {
-		padding: 8vw 24vh;
-		width: 100vw;
-		box-sizing: border-box;
-	}
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    padding: 8vw 24vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
 </style>
