@@ -11,7 +11,7 @@ type ProjectProps = {
 
 const Project = (props: ProjectProps) => {
   return (
-    <div className={`project ${props.reverse ? "project--reverse" : ""}`}>
+    <li className={`project ${props.reverse ? "project--reverse" : ""}`}>
       <div className="project__content">
         <h3>{props.title}</h3>
         <p>{props.description}</p>
@@ -39,7 +39,7 @@ const Project = (props: ProjectProps) => {
           alt={props.title}
         />
       </a>
-    </div>
+    </li>
   );
 };
 
