@@ -1,0 +1,16 @@
+.hero {
+  height: 100vh;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    width: fit-content;
+    white-space: nowrap;
+
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+      white-space: normal;
+    }
+  }
+}
