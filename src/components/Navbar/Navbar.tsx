@@ -66,6 +66,7 @@ export default function Navbar() {
           <a href="#contact">CONTACT</a>
         </li>
       </ul>
+      <div className="nav-background" />
     </nav>
   );
 }

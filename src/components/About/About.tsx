@@ -13,7 +13,7 @@ export default function About() {
       </p>
       <p>
         I’m enthusiastic about working mainly with React (Next.js) and Vue
-        (Nuxt), though I’m always excited about trying out new technologies.
+        (Nuxt), though I’m always excited about learning new technologies.
         <br />I love working in teams, and also like doing some UX/UI design
         here and there.
       </p>
