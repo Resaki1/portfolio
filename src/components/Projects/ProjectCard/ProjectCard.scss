@@ -1,56 +1,115 @@
 .project-card {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
-  width: 100%;
+  gap: 1.75rem;
+  min-width: 0;
 
-  img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+  .project-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    aspect-ratio: 1.55;
+    padding: 2px;
+    background: #1717173c;
+    backdrop-filter: blur(800px) brightness(1);
+    border-radius: 4px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+      transition: transform 300ms ease;
+    }
   }
 
   .project-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    min-width: 0;
+  }
 
-    h3 {
+  h3 {
+    margin: 0 0 0.875rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .project-contribution {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--project-divider);
+
+    h4 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
       font-weight: 700;
-    }
-
-    p {
-      margin: 1rem 0;
+      text-transform: uppercase;
     }
   }
 
-  .project-footer {
+  .project-technologies {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 0;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
 
-    .technologies,
-    .links {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
+    li + li::before {
+      content: "/";
+      margin-inline: 0.75rem;
+      color: var(--primary);
+    }
+  }
 
-      div {
-        width: fit-content;
-        display: inline-block;
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 44px;
+      padding-block: 0.5rem;
+      border-bottom: 1px solid var(--primary);
+      text-decoration: none;
+      transition: color 180ms ease;
+
+      &:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 5px;
       }
     }
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
+  &--featured {
+    align-items: center;
+    gap: clamp(2rem, 3vw, 3rem);
 
-    &--reverse {
-      img {
-        order: 1;
+    @media (min-width: 901px) {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+
+      .project-info {
+        grid-column: 1;
+        grid-row: 1;
       }
+
+      .project-visual {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-visual img,
+    .project-links a {
+      transition: none;
     }
   }
 }

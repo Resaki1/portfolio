@@ -57,7 +57,7 @@ export default function Navbar() {
     <nav ref={navRef} className="nav">
       <ul className={isAtTop ? "row" : "column"}>
         <li style={{ viewTransitionName: "nav-item-1" }}>
-          <a href="#about">ABOUT</a>
+          <a href="#about">ABOUT ME</a>
         </li>
         <li style={{ viewTransitionName: "nav-item-2" }}>
           <a href="#projects">PROJECTS</a>
